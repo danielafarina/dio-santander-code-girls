@@ -35,3 +35,9 @@ IDE para desenvolvimento Java.
 ## IntelliJ IDEA
 
 Ambiente de desenvolvimento integrado escrito em Java para o desenvolvimento de software de computador.
+
+# Comandos para rodar o programa
+
+## javac nomeDoPrograma.java
+
+## java nomeDoPrograma
