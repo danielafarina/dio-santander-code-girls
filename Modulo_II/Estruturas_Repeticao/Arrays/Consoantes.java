@@ -27,7 +27,7 @@ public class Consoantes {
 
         System.out.println("Consoantes: ");
 
-        for (String consoante : consoantes) {
+        for (String consoante : consoantes) {    // for each
             if (consoante != null) System.out.print(consoante + " ");
             
         }
