@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.*;
 
 public class ExemploList {
     public static void main(String[] args) {
@@ -41,7 +42,49 @@ public class ExemploList {
         System.out.println(notas);
 
         // Menor nota
-        System.out.println("Exiba a menor nota: " + Collections.min(notas))
+        System.out.println("Exiba a menor nota: " + Collections.min(notas));
 
+        // Maior nota
+        System.out.println("Exiba a maior nota: " + Collections.max(notas));
+
+        // Soma dos valores
+        System.out.println("Exiba a soma dos valores da lista: ");
+        Iterator<Double> iterator = notas.iterator();
+        Double soma = 0D;
+        while(iterator.hasNext()){ // imagine o mouse passando em cima da lista. Quando tá no primeiro elemento, ele pergunta: Tem o próximo? Sim, então faz o que tá dentro do while
+            Double next = iterator.next();
+            soma += next;
+        }
+        System.out.println("Exiba a soma dos valores: " + soma);
+
+        // Quantidade de elementos dentro da list
+        System.out.println("Tamanho da lista: " + notas.size());
+
+        // Remover elemento
+        System.out.println("Remova a nota 0.0 ");
+        notas.remove(0d); // se eu não colocar o "d", ele vai remover da POSIÇÃO zero.
+        System.out.println(notas);
+
+        // Remover elemento
+        System.out.println("Remova a nota 0.0 ");
+        notas.remove(0); // se eu não colocar o "d", ele vai remover da POSIÇÃO zero.
+        System.out.println(notas);
+
+        // Remova determinadas notas
+        System.out.println("Remova as notas menores que 7 e exiba a lista: ");
+        Iterator<Double> iterator1 = notas.iterator();
+        while(iterator1.hasNext()) {
+            Double next = iterator1.next();
+            if(next < 7) iterator1.remove();
+        }
+        System.out.println(notas);
+
+        // apagar toda a lista
+        System.out.println("Apague toda a lista: ");
+        notas.clear();
+        System.out.println(notas);
+
+        // Verificar se está vazia
+        System.out.println("A lista está vazia? " + notas.isEmpty());
     }
 }
