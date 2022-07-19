@@ -1,4 +1,4 @@
-# Collection
+# Collections
 
 É um objeto que agrupa múltiplos elementos (variáveis primitivas ou objetos) dentro de uma única unidade.
 
@@ -80,3 +80,10 @@ Falta mencionar que o método compareTo da interface Comparable deve ser consist
 Através de Comparable e Comparator também são controladas a ordenação da coleção TreeSet e as chaves do mapa TreeMap.
 
 Vale lembrar que muita coisa mudou desde esse post, com a entrada do Java 8, e você pode ler sobre lambdas e outras facilidades que ajudam em funções como comparação aqui no blog da Caelum.
+
+## Set
+
+Não permite elementos duplicados;
+
+Não possui índice;
+

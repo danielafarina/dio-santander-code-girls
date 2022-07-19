@@ -32,7 +32,29 @@ public class ExercicioProposto {
         while(iterator1.hasNext()) {
             Float next = iterator1.next();
             if (next > media) {
-                System.out.print(next + " ");
+                int indice = temperaturas.indexOf(next);
+                String mes;
+                switch(indice) {
+                    case 0:
+                        mes = "1 - Janeiro";
+                        break;
+                    case 1: 
+                        mes = "2 - Fevereiro";
+                        break;
+                    case 2: 
+                        mes = "3 - Marco";
+                        break;
+                    case 3:
+                        mes = "4 - Abril";
+                        break;
+                    case 4:
+                        mes = "5 - Maio";
+                        break;
+                    default:
+                        mes = "6 - Junho";
+                        break;
+                }
+                System.out.println(mes + " = " + next);
             } 
         }        
     }

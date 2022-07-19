@@ -7,6 +7,7 @@ public class ExemploList {
         System.out.println("Crie uma lista e adicione as sete notas: ");
 
         List<Double> notas = new ArrayList<Double>();
+        
         notas.add(7D);
         notas.add(8.5D);
         notas.add(9.3D);
