@@ -44,12 +44,12 @@ public class ExercicioProposto {
 
          // F
          System.out.println("Remova todas as cores que nao comecam com a letra 'v': ");
-         System.out.println("Cores3 antes: " + cores3);
-         for (int i = 0; i < cores3.size(); i++) {
-            char first = cores3.get(i).charAt(0);
-            if (first != 'v') cores3.remove(cores3.get(i));            
+        ArrayList<String> coresV = new ArrayList<>();
+         for (String cor : cores3) {
+            char first = cor.charAt(0);
+            if (first == 'v') coresV.add(cor);
          }
-         System.out.println("Cores3 depois: " + cores3);
+         System.out.println(coresV);
 
          // G
          System.out.println("Limpe o conjunto: ");

@@ -87,3 +87,13 @@ Não permite elementos duplicados;
 
 Não possui índice;
 
+## Map
+
+Elementos únicos (key) para cada valor (value);
+
+TreeMap = ordenação do map (O(log n));
+
+HashTable = 
+
+LinkedHashMap = O(1)
+
