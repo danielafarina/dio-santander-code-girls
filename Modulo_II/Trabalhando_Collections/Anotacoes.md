@@ -97,3 +97,34 @@ HashTable =
 
 LinkedHashMap = O(1)
 
+## Stream
+
+### Classe Anônima
+
+Classe que não recebeu um nome e é tanto declarada quanto instanciada em uma única instrução.
+
+### Functional Interface
+
+Qualquer interface com uma SAM (single abstract method) é uma interface funcional e sua implementação pode ser tratada como expressões lambda. Ex: Comparator, Consumer, Function, Predicate.
+
+### Lambda
+
+É uma função sem declaração, isto é, não é necessário colocar um nome, um tipo de retorno e o modificador de acesso. 
+
+*(argumento) -> (corpo)*
+
+É uma simplificação de uma classe anônima.
+
+### Reference Method
+
+Novo recurso do Java 8 que permite referenciar um método/construtor de uma classe (de forma funcional) e assim indicar que ele deve ser utilizado num ponto específico do código, deixando-o mais simples e legível. Para utilizá-lo, basta informar uma classe ou referência seguida do símbolo "::" e o nome do método sem os parênteses no final.
+
+É uma forma de simplificar uma expressão lambda.
+
+### Streams API
+
+Traz uma nova opção para manipulação de coleções em Java seguindo os princípios da programação funcional. Combinada com expressões lambda, ela proporciona uma forma diferente de lidar com conjuntos de elementos, oferecendo ao desenvolvedor uma maneira simples e concisa de escrever o código que resulta em facilidade de manutenção e paralelização sem efeitos indesejados em tempo de execução.
+
+*Source -> Pipeline -> Terminal*
+
+ 
