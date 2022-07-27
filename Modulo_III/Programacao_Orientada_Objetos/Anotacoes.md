@@ -18,6 +18,17 @@ PE foca no *como* fazer (pois o nível baixo de programação com pouco nível d
 
 É um paradigma de análise, projeto e programação de sistemas de software baseado na composição e interação entre diversas unidades de software chamadas de objetos.
 
+# Pilares
+
+## Herança
+
+## Encapsulamento
+
+## Polimorfismo
+
+Permite que um mesmo nome represente vários comportamentos diferentes. *Ex:* Método acordar() pode ser feito de várias formas diferentes (acordar pra trabalhar, acordar pra pedalar, acordar no domingo, etc).
+
+
 # Fundamentos
 
 ## 1. Abstração
@@ -260,8 +271,106 @@ não tem upcast.
 
 Descer na hierarquia de classes. Não é aconselhável usar.
 
+### Polimorfismo *** importantíssimo
+
+É a mesma ação, se comportando diferente. Muitas formas para o mesmo método. *Ex:* Imagine uma entidade chamada Pagamento. Ele pode se *processar()* de várias formas diferentes: boleto, credito, debito, pix...
+
+### Sobrescrita
+
+É a mesma ação, *podendo* se comportar diferente. *Ex:* Imagine a entidade Conta que possui um atributo *saldo* e um método *exibirSaldo()*, que acrescenta algo a mais no método de apenas visualizar o saldo. Em contas corrente e universitária, basta exibir o saldo. Em contas poupança e especial (cheque especial), é preciso utilizar o método para mostrar o saldo corretamente (aplicando juros, etc.). Então nessas contas eu sobrescrevi a forma mais simples que era só de mostrar o valor.
+
+### Polimorfismo vs Sobrescrita
+
+O comportamento padrão do método é tão abstrato que não tem como vc prever as futuras diferenças no uso do mesmo (polimorfismo). 
+
+Se você quiser, pode usar o que está na classe mãe, mas se quiser, pode fazer algo completamente diferente.
+
+*ATENÇÃO*
+
+Vide exemplo *RodarClasseMae.java*
+
 # Associação
+
+Possibilita um relacionamento entre classes/objetos, no qual estes possam pedir ajuda a outras classes/objetos e representar de forma completa o conceito ao qual se destinam. Neste tipo de relacionamento, as classes e os objetos interagem entre si para atingir seus objetivos.
+
+## Associação Estrutural
+
+Manifesta-se na estrutura, nos seus atributos.
+
+#### Composição
+
+A parte (endereço) só existe com o todo (pessoa).
+
+*Códigos*
+
+class Pessoa {
+    Endereco endereco;
+}
+
+#### Agregação
+
+A parte (disciplina) existe sem o todo (aluno).
+
+*Códigos*
+
+class Disciplina {
+    Aluno aluno;
+}
+
+## Associação Comportamental
+
+Manifesta-se nos métodos. *Ex:* 
+
+Compra // entidade Compra
+Cliente cliente
+finalizar(Cupom cupom, ...)  // metodo depende do uso de outra entidade, chamada Cupom
+finalizar(...)
+
+*OBS.*
+
+Herança vs Associação: Herança é mais rígido. Associação mais flexível. Posso usá-la enquanto rodo a aplicação.
 
 # Interface
 
+Define um contrato que deve ser seguido pela classe que a implementa. Quando uma classe implementa uma interface, ela se compromete a realizar todos os comportamentos que a interface disponibiliza. *Ex:* A impressora HP pode funcionar em Windows, Linux, iOS. Ela fornece uma interface, que é um conjunto de métodos que deverão ser implementados. Pessoal do Linux pega os métodos e implementa do jeito que acharem necessário.
 
+"Essa é minha interface e os métodos que vou usar nelas. Você implementa do jeito que achar necessário."
+
+É você obrigar um terceiro a implementar os métodos que você vai colocar dentro dela.
+
+*Códigos:*
+
+interface A {
+    ...
+}
+
+class B implements A {
+
+}
+
+
+# Pacotes
+
+São uma organização física ou lógica criada para separar classes com responsabilidades distintas. Com isso, espera-se que a aplicação fique mais organizada e seja possível separar classes de finalidades e representatividades diferentes.
+
+*Códigos*
+
+package
+
+import // utilizado se quero uma classe que está em outro pacote
+
+# Visibilidades
+
+Um modificador de acesso tem como finalidade determinar até que ponto uma classe, atributo ou método pode ser usado. A utilização de modificadores de acesso é fundamental para o uso efetivo da Orientação a Objetos. Algumas boas práticas e conceitos só são atingidos com o uso correto deles.
+
+## Private
+
+Só será visível dentro da classe onde foi criada.
+
+## Protected
+
+Dentro da classe, **mesmo pacote** e subclasses.
+
+## Public
+
+Em qualquer lugar.
